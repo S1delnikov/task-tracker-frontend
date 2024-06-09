@@ -133,7 +133,7 @@ export default {
         async createSubtask(ctx, task){
             try {
                 const res = await axios.post(
-                    `create_subtask/${task.id_task}/`, 
+                    `/create_subtask/${task.id_task}/`, 
                     {
                         title: '',
                         description: '',
