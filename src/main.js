@@ -7,7 +7,7 @@ import components from '@/components/UI'
 import { VueMasonryPlugin } from 'vue-masonry'
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL =process.env.VUE_APP_FASTAPI_BACKEND_URL // FastAPI backend   process.env.VUE_APP_FASTAPI_BACKEND_URL
+axios.defaults.baseURL = process.env.VUE_APP_FASTAPI_BACKEND_URL // FastAPI backend   process.env.VUE_APP_FASTAPI_BACKEND_URL
 // axios.defaults.baseURL = 'https://task-tracker-5t53.onrender.com'
 
 const app = createApp(App)
