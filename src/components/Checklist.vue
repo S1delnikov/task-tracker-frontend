@@ -11,7 +11,7 @@
             <div class="checklist__main">
                 <div class="checklist__todo" v-for="subtask in task.subtasks" :key="subtask.id_subtask">
                     <label class="todo__checkbox">
-                        <input class="todo__real-checkbox" type="checkbox" v-model="subtask.done">
+                        <input class="todo__real-checkbox" type="checkbox" v-model="subtask.done" @click="updateSubtask(subtask)">
                         <span class="todo__custom-checkbox"></span>
                     </label>
                     <input class="todo__text" type="text" v-model="subtask.description">
