@@ -120,7 +120,7 @@ export default {
         },
         async deleteTask(ctx, task) {
             try{
-                await axios.delete(`https://s1delnikov-task-tracker-backend-e7b3.twc1.net/delete_task_solo/${task.id_task}/`, {
+                await axios.delete(`/delete_task_solo/${task.id_task}/`, {
                     headers: {
                         Authorization: 'Bearer ' + localStorage.getItem('token')
                     }
