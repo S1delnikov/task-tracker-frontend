@@ -136,7 +136,7 @@ export default {
 .menu-item__description {
     display: block;
     margin: 0 auto;
-    background-color: #fff;
+/*     background-color: #fff; */
 }
 
 .menu-item__description textarea {
