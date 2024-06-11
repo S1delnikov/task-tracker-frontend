@@ -182,7 +182,7 @@ export default {
     margin: 2rem auto;
     background-color: #E6ECDC;
     border-radius: 2rem;
-    overflow-x: scroll;
+/*     overflow-x: scroll; */
 }
 
 .profile {
