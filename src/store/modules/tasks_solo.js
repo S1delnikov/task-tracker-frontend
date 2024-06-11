@@ -28,7 +28,7 @@ export default {
             })
         },
         createTask(state, task){
-            state.tasks.push(task)
+            state.tasks.unshift(task)
         },
         updateTask(state, task) {
             state.tasks.forEach(t => {
