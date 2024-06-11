@@ -190,6 +190,9 @@ export default {
                 const taskProj = await res.data
                 ctx.commit('updateTaskProjPicAndCategory', taskProj)
             } catch(e) {
+                if (e.response.status==405) {
+                    return
+                }
                 localStorage.setItem('isAuthenticated', false)
                 router.push('/')
             }
