@@ -22,9 +22,13 @@ export default {
                 t.picture = state.host + t.picture
             })
             state.tasksProj = tasksProj
+            state.tasksProj.sort((a, b) => b.id_task - a.id_task)
+            state.tasksProj.forEach(t => {
+                t.subtasks.sort((a, b) => a.id_subtask - b.id_subtask)
+            })
         },
         createTaskProj(state, newTask) {
-            state.tasksProj.push(newTask)
+            state.tasksProj.unshift(newTask)
         },
         updateTaskProj(state, taskProj) {
             state.tasksProj.forEach(t => {
