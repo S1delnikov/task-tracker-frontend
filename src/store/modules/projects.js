@@ -20,6 +20,7 @@ export default {
                 p.picture = state.host + p.picture
             })
             state.projects = projects
+            state.projects.sort((a, b) => a.id_project - b.id_project)
         },
         addProject(state, newProject) {
             newProject.picture = state.host + newProject.picture
