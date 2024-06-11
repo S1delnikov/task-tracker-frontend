@@ -114,7 +114,7 @@ export default {
                     }, 
                     responseType: 'blob' 
                 })
-                console.log(res.data)
+               // console.log(res.data)
                 // console.log(new Blob([res.data.profile_pic], {type: res.data.profile_pic.media_type}))
                 // const blob = await res.data.blob()
                 // const url = URL.createObjectURL(res.data)
@@ -124,7 +124,7 @@ export default {
 
                 // const pic = await res.data.profile_pic
 
-                console.log('actions: ', url)
+                //console.log('actions: ', url)
                 // console.log(typeof(pic))
                 ctx.commit('setProfilePic', url)
             } catch(e) {
@@ -142,7 +142,7 @@ export default {
                     }
                 })
                 const currentUser = res.data
-                console.log(currentUser)
+                //console.log(currentUser)
                 ctx.commit('setCurrentUser', currentUser)
                 ctx.commit('setAuth', true)
             } catch(e) {
