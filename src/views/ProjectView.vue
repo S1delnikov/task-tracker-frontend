@@ -539,7 +539,7 @@ export default {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     text-align: justify;
-    overflow: scroll;
+/*     overflow: scroll; */
     height: 2rem;
     font-size: 1.4rem;
     height: 20%;
