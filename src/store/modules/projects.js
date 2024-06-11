@@ -24,7 +24,7 @@ export default {
         },
         addProject(state, newProject) {
             newProject.picture = state.host + newProject.picture
-            state.projects.push(newProject)
+            state.projects.unshift(newProject)
         },
         updateProject(state, updatedProject) {
             state.projects.forEach(project => {
