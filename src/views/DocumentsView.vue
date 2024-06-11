@@ -81,7 +81,7 @@ export default {
 <style scoped>
 .documents {
     /* background-color: #fff; */
-    overflow-x: scroll;
+/*     overflow-x: scroll; */
 }
 
 .documents__control {
