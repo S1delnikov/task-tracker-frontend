@@ -22,7 +22,7 @@ export default {
     mutations: {
         setTasks(state, tasks) {
             state.tasks = tasks
-            state.tasks.sort((a, b) => a.id_task - b.id_task)
+            state.tasks.sort((a, b) => b.id_task - a.id_task)
             state.tasks.forEach(t => {
                 t.subtasks.sort((a, b) => a.id_subtask - b.id_subtask)
             })
