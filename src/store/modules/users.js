@@ -200,7 +200,7 @@ export default {
             try {
                 const file = new FormData()
                 file.append('picture', event.target.files[0])
-                const res = await axios.post('/upload_profile_pic', file, {
+                const res = await axios.post('/upload_profile_pic/', file, {
                     headers: {
                         Authorization: 'Bearer ' + localStorage.getItem('token')
                     }
