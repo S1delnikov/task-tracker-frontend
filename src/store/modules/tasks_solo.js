@@ -22,6 +22,9 @@ export default {
     mutations: {
         setTasks(state, tasks) {
             state.tasks = tasks
+            state.tasks.forEach(t => {
+                t.subtasks.sort((a, b) => a.id_subtask - b.id_subtask)
+            })
         },
         createTask(state, task){
             state.tasks.push(task)
