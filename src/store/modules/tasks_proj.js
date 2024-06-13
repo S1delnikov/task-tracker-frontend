@@ -36,7 +36,7 @@ export default {
                     t = taskProj
                 }
             })
-            console.log(state.tasksProj)
+            // console.log(state.tasksProj)
         },
         deleteTaskProj(state, id_task) {
             state.tasksProj = state.tasksProj.filter(task => task.id_task != id_task)
@@ -109,7 +109,7 @@ export default {
                 const newTask = await res.data
                 ctx.commit('createTaskProj', newTask)
             } catch(e) {
-                console.log(e)
+                // console.log(e)
                 if (e.response.status == 401) {
                     localStorage.setItem('isAuthenticated', false)
                     router.push('/')
@@ -117,7 +117,7 @@ export default {
             }
         },
         async updateTaskProj(ctx, data) {
-            console.log('id', data.id_project, 'task', data.taskProj)
+            // console.log('id', data.id_project, 'task', data.taskProj)
             try {
                 await axios.put(
                     `/update_task_proj/${data.id_project}/${data.taskProj.id_task}`, 
@@ -131,7 +131,7 @@ export default {
                 ctx.commit('updateTaskProj', data.taskProj)
 
             } catch(e) {
-                console.log(e)
+                // console.log(e)
                 alert('Такой задачи не существует.')
             }
         },
@@ -148,7 +148,7 @@ export default {
                 )
                 ctx.commit('deleteTaskProj', data.taskProj.id_task)
             } catch(e) {
-                console.log(e)
+                // console.log(e)
                 if (e.response.status == 401) {
                     localStorage.setItem('isAuthenticated', false)
                     router.push('/')
@@ -169,7 +169,7 @@ export default {
                     }
                 )
                 const taskProj = await res.data
-                console.log('res', taskProj)
+                // console.log('res', taskProj)
                 ctx.commit('updateTaskProjPicAndCategory', taskProj)
             } catch(e) {
                 if (e.response.status == 400) {
@@ -203,7 +203,7 @@ export default {
         },
         async changeTaskProjCategory(ctx, data) {
             try {
-                console.log('data', data.taskProj.category)
+                // console.log('data', data.taskProj.category)
                 data.taskProj.category = data.category
                 const res = await axios.put(
                     `/update_task_proj/${data.id_project}/${data.taskProj.id_task}`, 
