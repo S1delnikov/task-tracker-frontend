@@ -55,7 +55,7 @@ export default {
                     })
                 const projects = await res.data
                 ctx.commit('setProjects', projects)
-                console.log(projects)
+                // console.log(projects)
             } catch(e) {
                 if (e.response.status == 401) {
                     localStorage.setItem('isAuthenticated', false)
