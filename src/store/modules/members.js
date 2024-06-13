@@ -36,7 +36,7 @@ export default {
                     }
                 })
                 const members = res.data
-                console.log(members)
+                // console.log(members)
                 ctx.commit('setMembers', members)
             } catch(e) {
                 localStorage.setItem('isAuthenticated', false)
@@ -60,7 +60,7 @@ export default {
             } catch(e) {
                 // console.log(e)
                 if (e.response.status == 400) {
-                    console.log(400)
+                    // console.log(400)
                     let search = document.getElementById('search-project-member')
                     search.style.border = '0.1rem solid red'
                 }
