@@ -171,7 +171,7 @@ export default {
         },
         async updateUserInfo(ctx, currentUser) {
             try {
-                console.log('start')
+                // console.log('start')
                 const res = await axios.put('/update_user_info', 
                 {
                     "searchname": currentUser.searchname,
